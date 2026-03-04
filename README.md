@@ -33,3 +33,10 @@ Thanks to [Lost Pixel](https://www.lost-pixel.com/) for providing the visual tes
 
 - **Webstudio core** (all functionality in this repository) is free/open-source under AGPL-3.0-or-later.
 - **sdk-components-animation** package (optional) is proprietary. You must accept the Webstudio, Inc. EULA located in [sdk-components-animation/LICENSE](./packages/sdk-components-animation/LICENSE) before using it.
+
+## Hacking
+
+```shell
+docker compose -f docker-compose.yml --env-file ./apps/builder/.env --env-file ./apps/builder/.env.development up --build -d
+docker compose -f docker-compose.yml --env-file ./apps/builder/.env --env-file ./apps/builder/.env.development down -v --remove-orphans
+```
