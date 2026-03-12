@@ -1,2 +1,2 @@
 postdeploy: pnpm migrations migrate
-web: pnpm start
+web: pnpm dev
