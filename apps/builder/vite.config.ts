@@ -95,15 +95,10 @@ export default defineConfig(({ mode }) => {
       // Service-to-service OAuth token call requires a specified host for the wstd.dev domain
       host: "0.0.0.0",
       port: process.env.PORT || 5173,
-      strictPort: true,
-      
+      strictPort: true,      
       // Needed for SSL
       proxy: {},
-
-      https: {
-        key: readFileSync("../../https/privkey.pem"),
-        cert: readFileSync("../../https/fullchain.pem"),
-      },
+      https: {},
       cors: ((
         req: IncomingMessage,
         callback: (error: Error | null, options: CorsOptions | null) => void
